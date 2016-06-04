@@ -11,10 +11,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160604203552) do
+ActiveRecord::Schema.define(version: 20160604205405) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "reports", force: :cascade do |t|
+    t.integer  "student_id"
+    t.boolean  "dating",          default: false
+    t.boolean  "travel",          default: false
+    t.boolean  "runaway",         default: false
+    t.boolean  "homeless",        default: false
+    t.boolean  "tatoo",           default: false
+    t.boolean  "truant",          default: false
+    t.boolean  "luxury",          default: false
+    t.boolean  "provocative",     default: false
+    t.boolean  "explicit_online", default: false
+    t.boolean  "sti",             default: false
+    t.boolean  "pregnancy",       default: false
+    t.boolean  "cps",             default: false
+    t.string   "comments"
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+  end
 
   create_table "students", force: :cascade do |t|
     t.string   "first"
