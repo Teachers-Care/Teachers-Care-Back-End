@@ -1,6 +1,7 @@
 class StaffsController < ApplicationController
   def create
   @staff = Staff.new(staff_params)
+  binding.pry
   if @staff.save
     render "create.json.jbuilder", status: :created
   else
