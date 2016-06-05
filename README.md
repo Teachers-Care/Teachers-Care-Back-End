@@ -31,6 +31,52 @@
   }
   ```
 
+#### POST /students
+
+    This creates a new user
+    Params:
+      * first: string
+      * last: string
+      * student_number
+      * grade
+      * age
+      * female
+      * male
+
+    Returns 201 Created on Success and 422 Unprocessable Entity in case of failure.
+
+    **Request:**
+
+    ```
+    {
+      "first": "First"
+      "last": "Last"
+      "student_number": 12345668
+      "grade": 6
+      "age": 12
+      "female": true
+      "male" : false
+    }
+    ```
+
+    **Response:**
+
+    ```
+    {
+      "student": {
+        "id": 1,
+        "first": "First",
+        "last": "Last",
+        "student_number": 12345668,
+        "grade": 6,
+        "age": 12,
+        "female": true,
+        "male" : false,
+        "created_at": 
+
+      }
+    }
+    ```
 
 == README
 
