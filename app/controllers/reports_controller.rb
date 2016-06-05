@@ -8,6 +8,10 @@ class ReportsController < ApplicationController
            status: :unprocessable_entity
   end
   end
+
+  def index
+    @reports = Report.all
+  end
   private
   def report_params
     params.permit(:dating, :travel, :runaway, :homeless, :tatoo, :truant, :luxury, :provocative,
